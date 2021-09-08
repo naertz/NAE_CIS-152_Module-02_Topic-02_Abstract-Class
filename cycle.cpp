@@ -89,7 +89,7 @@ int Cycle::getNumberOfFlats() const {
 // ==================================
 
 // Function(s) =============================================================================================================
-// Pure Virtual Cycle String Representation
+// Virtual Cycle String Representation
 std::string Cycle::str() const {
     std::ostringstream oSS;
 
@@ -100,7 +100,7 @@ std::string Cycle::str() const {
     return objectStringRepresentation;
 }
 
-// Pure Virtual Ride Printer
+// Virtual Ride Printer
 std::string Cycle::ride() const {
     std::ostringstream oSS;
 
@@ -111,7 +111,7 @@ std::string Cycle::ride() const {
     return rideMessage;
 }
 
-// Pure Virtual Stop Printer
+// Virtual Stop Printer
 std::string Cycle::stop() const {
     std::ostringstream oSS;
 
