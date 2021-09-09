@@ -24,3 +24,7 @@ HEADERS += \
     bicycle_driver.h \
     cycle.h \
     cycle_driver.h
+
+DISTFILES += \
+    LICENSE \
+    README.md
