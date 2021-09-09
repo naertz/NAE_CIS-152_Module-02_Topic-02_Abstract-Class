@@ -18,7 +18,7 @@ class Cycle {
         void setNumberOfFlats(int numberOfFlats);    // Number Of Flats Mutator
         int getNumberOfTires() const;                // Number of Tires Accessor
         int getNumberOfFlats() const;                // Number of Flats Accessor
-        virtual std::string str() const;             // Virtual Cycle String Representation
+        virtual std::string str() const;             // Virtual Class String Representation
         virtual std::string ride() const;            // Virtual Ride Printer
         virtual std::string stop() const;            // Virtual Stop Printer
     private:

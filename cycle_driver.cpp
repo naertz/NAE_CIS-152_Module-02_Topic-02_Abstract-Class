@@ -20,26 +20,26 @@
 
 #include <iostream>
 
-void createObject();                                                           // O(1)
-void printCreateDefaultObject();                                               // O(1)
+static void createObject();                                                           // O(1)
+static void printCreateDefaultObject();                                               // O(1)
 
-void createObject(int numberOfTires);                                          // O(1)
-void printCreateNumberOfTiresObject(int numberOfTires);                        // O(1)
+static void createObject(int numberOfTires);                                          // O(1)
+static void printCreateNumberOfTiresObject(int numberOfTires);                        // O(1)
 
-void createObject(int numberOfTires, int numberOfFlats);                       // O(1)
-void printCreateMainObject(int numberOfTires, int numberOfFlats);              // O(1)
+static void createObject(int numberOfTires, int numberOfFlats);                       // O(1)
+static void printCreateMainObject(int numberOfTires, int numberOfFlats);              // O(1)
 
-void mutateObjectTires(int initialTires, int initialFlats, int newTires);      // O(1)
-void printMutateObjectTires(int initialTires, int initialFlats, int newTires); // O(1)
+static void mutateObjectTires(int initialTires, int initialFlats, int newTires);      // O(1)
+static void printMutateObjectTires(int initialTires, int initialFlats, int newTires); // O(1)
 
-void mutateObjectFlats(int initialTires, int initialFlats, int newFlats);      // O(1)
-void printMutateObjectFlats(int initialTires, int initialFlats, int newFlats); // O(1)
+static void mutateObjectFlats(int initialTires, int initialFlats, int newFlats);      // O(1)
+static void printMutateObjectFlats(int initialTires, int initialFlats, int newFlats); // O(1)
 
-void rideObject(int initialTires, int initialFlats);                           // O(1)
-void printRideObject(int initialTires, int initialFlats);                      // O(1)
+static void rideObject(int initialTires, int initialFlats);                           // O(1)
+static void printRideObject(int initialTires, int initialFlats);                      // O(1)
 
-void stopObject(int initialTires, int initialFlats);                           // O(1)
-void printStopObject(int initialTires, int initialFlats);                      // O(1)
+static void stopObject(int initialTires, int initialFlats);                           // O(1)
+static void printStopObject(int initialTires, int initialFlats);                      // O(1)
 
 void cycleDriver() {
     printCreateDefaultObject();                       // O(1)
@@ -132,7 +132,7 @@ void cycleDriver() {
     printStopObject(4, 2);                            // O(1)
 } // O(1) * 59 = O(1)
 
-void createObject() {
+static void createObject() {
     // Create object with default constructor.
     Cycle defaultCycle = Cycle();                                                                      // O(1)
 
@@ -144,7 +144,7 @@ void createObject() {
     std::cout << "Default Cycle getNumberOfFlats(): " << defaultCycle.getNumberOfFlats() << std::endl; // O(1)
 } // O(1) * 4 = O(1)
 
-void printCreateDefaultObject() {
+static void printCreateDefaultObject() {
     // Heading
     std::cout << "Default Constructor:" << std::endl; // O(1)
     // Event
@@ -153,7 +153,7 @@ void printCreateDefaultObject() {
     std::cout << std::endl;                           // O(1)
 } // O(1) * 3 = O(1)
 
-void createObject(int numberOfTires) {
+static void createObject(int numberOfTires) {
     // Create object with Number Of Tires constructor.
     Cycle numberOfTiresCycle = Cycle(numberOfTires);                                                                 // O(1)
 
@@ -165,7 +165,7 @@ void createObject(int numberOfTires) {
     std::cout << "Number Of Tires Cycle getNumberOfFlats(): " << numberOfTiresCycle.getNumberOfFlats() << std::endl; // O(1)
 } // O(1) * 4 = O(1)
 
-void printCreateNumberOfTiresObject(int numberOfTires) {
+static void printCreateNumberOfTiresObject(int numberOfTires) {
     // Heading
     std::cout << "Number Of Tires Constructor (" << numberOfTires << " Tire(s)):" << std::endl; // O(1)
     // Event
@@ -174,7 +174,7 @@ void printCreateNumberOfTiresObject(int numberOfTires) {
     std::cout << std::endl;                                                                     // O(1)
 } // O(1) * 3 = O(1)
 
-void createObject(int numberOfTires, int numberOfFlats) {
+static void createObject(int numberOfTires, int numberOfFlats) {
     // Create object with main constructor.
     Cycle mainCycle = Cycle(numberOfTires, numberOfFlats);                                       // O(1)
 
@@ -186,7 +186,7 @@ void createObject(int numberOfTires, int numberOfFlats) {
     std::cout << "Main Cycle getNumberOfFlats(): " << mainCycle.getNumberOfFlats() << std::endl; // O(1)
 } // O(1) * 4 = O(1)
 
-void printCreateMainObject(int numberOfTires, int numberOfFlats) {
+static void printCreateMainObject(int numberOfTires, int numberOfFlats) {
     // Heading
     std::cout << "Main Constructor (" << numberOfTires << " Tire(s), " << numberOfFlats << " Flat(s)):" << std::endl;  // O(1)
     // Event
@@ -195,7 +195,7 @@ void printCreateMainObject(int numberOfTires, int numberOfFlats) {
     std::cout << std::endl;                                                                                            // O(1)
 } // O(1) * 3 = O(1)
 
-void mutateObjectTires(int initialTires, int initialFlats, int newTires) {
+static void mutateObjectTires(int initialTires, int initialFlats, int newTires) {
     // Create object with main constructor.
     Cycle newCycle = Cycle(initialTires, initialFlats);                                           // O(1)
 
@@ -212,7 +212,7 @@ void mutateObjectTires(int initialTires, int initialFlats, int newTires) {
     std::cout << "New Cycle str(): " << newCycle.str() << std::endl;                              // O(1)
 } // O(1) * 5 = O(1)
 
-void printMutateObjectTires(int initialTires, int initialFlats, int newTires) {
+static void printMutateObjectTires(int initialTires, int initialFlats, int newTires) {
     // Heading
     std::cout << "Cycle(" << initialTires << " Tire(s), " << initialFlats << " Flat(s)) set to " << newTires << " Tire(s):" << std::endl; // O(1)
     // Event
@@ -221,7 +221,7 @@ void printMutateObjectTires(int initialTires, int initialFlats, int newTires) {
     std::cout << std::endl;                                                                                                               // O(1)
 } // O(1) * 3 = O(1)
 
-void mutateObjectFlats(int initialTires, int initialFlats, int newFlats) {
+static void mutateObjectFlats(int initialTires, int initialFlats, int newFlats) {
     // Create object with main constructor.
     Cycle newCycle = Cycle(initialTires, initialFlats);                                           // O(1)
 
@@ -238,7 +238,7 @@ void mutateObjectFlats(int initialTires, int initialFlats, int newFlats) {
     std::cout << "New Cycle str(): " << newCycle.str() << std::endl;                              // O(1)
 } // O(1) * 5 = O(1)
 
-void printMutateObjectFlats(int initialTires, int initialFlats, int newFlats) {
+static void printMutateObjectFlats(int initialTires, int initialFlats, int newFlats) {
     // Heading
     std::cout << "Cycle(" << initialTires << " Tire(s), " << initialFlats << " Flat(s)) set to " << newFlats << " Flat(s):" << std::endl; // O(1)
     // Event
@@ -247,7 +247,7 @@ void printMutateObjectFlats(int initialTires, int initialFlats, int newFlats) {
     std::cout << std::endl;                                                                                                               // O(1)
 } // O(1) * 3 = O(1)
 
-void rideObject(int initialTires, int initialFlats) {
+static void rideObject(int initialTires, int initialFlats) {
     // Create object with main constructor.
     Cycle newCycle = Cycle(initialTires, initialFlats);                // O(1)
 
@@ -255,7 +255,7 @@ void rideObject(int initialTires, int initialFlats) {
     std::cout << "New Cycle ride(): " << newCycle.ride() << std::endl; // O(1)
 } // O(1) * 2 = O(1)
 
-void printRideObject(int initialTires, int initialFlats) {
+static void printRideObject(int initialTires, int initialFlats) {
     // Heading
     std::cout << "Cycle(" << initialTires << " Tire(s), " << initialFlats << " Flat(s)) called to Ride:" << std::endl; // O(1)
     // Event
@@ -264,7 +264,7 @@ void printRideObject(int initialTires, int initialFlats) {
     std::cout << std::endl;                                                                                            // O(1)
 } // O(1) * 3 = O(1)
 
-void stopObject(int initialTires, int initialFlats) {
+static void stopObject(int initialTires, int initialFlats) {
     // Create object with main constructor.
     Cycle newCycle = Cycle(initialTires, initialFlats);                // O(1)
 
@@ -272,7 +272,7 @@ void stopObject(int initialTires, int initialFlats) {
     std::cout << "New Cycle stop(): " << newCycle.stop() << std::endl; // O(1)
 } // O(1) * 2 = O(1)
 
-void printStopObject(int initialTires, int initialFlats) {
+static void printStopObject(int initialTires, int initialFlats) {
     // Heading
     std::cout << "Cycle(" << initialTires << " Tire(s), " << initialFlats << " Flat(s)) called to Stop:" << std::endl; // O(1)
     // Event

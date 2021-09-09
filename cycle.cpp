@@ -89,7 +89,7 @@ int Cycle::getNumberOfFlats() const {
 // ==================================
 
 // Function(s) =============================================================================================================
-// Virtual Cycle String Representation
+// Virtual Class String Representation
 std::string Cycle::str() const {
     std::ostringstream oSS;
 

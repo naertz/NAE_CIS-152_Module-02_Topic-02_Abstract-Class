@@ -8,6 +8,8 @@ CONFIG -= app_bundle
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    bicycle.cpp \
+    bicycle_driver.cpp \
     cycle.cpp \
     cycle_driver.cpp \
     main_driver.cpp
@@ -18,5 +20,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    bicycle.h \
+    bicycle_driver.h \
     cycle.h \
     cycle_driver.h
